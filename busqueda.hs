@@ -1,6 +1,6 @@
-z=[0..100]
+z=[-10..100]
 
-buscar x = busqueda(x,head z,last z)
+buscar x = busqueda(x,0,length z -1)
 
 busqueda (x,l,r) = if(l > r)then
     print (-1)

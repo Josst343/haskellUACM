@@ -8,6 +8,8 @@ buscaArreglo (x,cont,z)=if(cont > (length z-1))then
         if(z!!cont ==x)then do
             putStr "encontrado en la posicion: \n"
             print (cont)
+            putStr "el valor es \n"
+            print (z!!cont)
             putStr "\n"
         else 
                 buscaArreglo(x,cont+1,z)
