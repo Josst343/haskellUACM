@@ -11,7 +11,9 @@ calculaAsuperior = (length x) * (sigma (producto x y))- (sigma x  * sigma y)
 
 calculaAinferiro =(length x * sigma(cuadrado x))- (sigma x * sigma x)
 
-cB = fromIntegral(sigma y - (cA) *fromIntegral(sigma x) )/ fromIntegral(length x)
-
 cA = fromIntegral (calculaAsuperior)/ fromIntegral(calculaAinferiro)
+
+cB = (fromIntegral(sigma y )- cA *fromIntegral(sigma x) )/ fromIntegral(length x)
+
+solucion x= cA* fromIntegral(x) +cB
 
