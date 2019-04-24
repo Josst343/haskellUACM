@@ -1,15 +1,15 @@
-x=[100,90,80,45,50,50,60,40,25,20]
-y=[3,5,9,10,20,21,24,24,27,35]
+cadena = "5/4+8/2 12/3/2/2 5/8-3/8"
+usar= "(5,4)+(8,2) (12,3)/(2,2) (5,8)-(3,8)"
+prueba = "5/8"
 
-promedio z = fromIntegral(sum z) / fromIntegral(length z)
+suma x y = (div ((fst x)*(snd y) + (fst y)*(snd x)) (gcd ((fst x)*(snd y) + (fst y)*(snd x))((snd x)*(snd y))  ),div  ((snd x)*(snd y))(gcd ((fst x)*(snd y) + (fst y)*(snd x))((snd x)*(snd y))))
 
-lisProm xs = [fromIntegral(x)-(promedio xs)|x<-xs]
+resta x y = (div ((fst x)*(snd y) - (fst y)*(snd x)) (gcd ((fst x)*(snd y) - (fst y)*(snd x))((snd x)*(snd y))  ),div  ((snd x)*(snd y))(gcd ((fst x)*(snd y) - (fst y)*(snd x))((snd x)*(snd y))))
 
-cuadrado xs = [x^2| x <-lisProm xs]
-multiplicaList xs ys = [(x*y)|(x,y)<- zip xs ys]
+multiplicacion x y = (div ((fst x)* (fst y)) (gcd ((fst x)* (fst y))((snd x)*(snd y))),div ((snd x)*(snd y)) (gcd ((fst x)* (fst y))((snd x)*(snd y))))
 
-parteArriba =sum(multiplicaList(lisProm(x))(lisProm(y)))
+division x y = (div ((fst x)* (snd y)) (gcd ((fst x)* (snd y))((snd x)*(fst y))),div ((snd x)*(fst y)) (gcd ((fst x)* (snd y))((snd x)*(fst y))))
 
-parteAbajo =sqrt(sum(cuadrado x))* sqrt(sum(cuadrado y))
+convierte xs = [x | x <- xs ,x `notElem` ['/']]
 
-resultado = parteArriba / parteAbajo
+separar h:lista = h : []
