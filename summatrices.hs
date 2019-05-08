@@ -12,7 +12,3 @@ sumvec::[Double]->[Double]->[Double]
 sumvec [] vecB = []
 sumvec vecA [] = []
 sumvec (x:xs) (xb:xsb) = (x+xb):(sumvec xs xsb)
-
-prodMat::[[Double]]->[[Double]]->[[Double]]
-prodMat [] matB = []
-prodMat matA []= []
