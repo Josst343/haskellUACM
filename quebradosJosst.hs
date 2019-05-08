@@ -19,7 +19,7 @@ division x y = (div ((fst x)* (snd y)) (gcd ((fst x)* (snd y))((snd x)*(fst y)))
 separaOp xs = partir xs ' '
 
 operando :: String->Char
-
+operando []='\NUL'
 operando (x:xs)
     | x ==  '/' = operando xs 
     | isNumber x = operando xs
